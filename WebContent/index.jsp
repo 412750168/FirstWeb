@@ -2,21 +2,25 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.mysql.jdbc.Driver"%>
 <%@ page import="java.sql.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="./js/test.js">
+	
 </script>
 <title>Insert title here</title>
 </head>
+
 <body>
-	This is only to test!!!
+	This is only to test!!!你好啊！！！！
 	<br>
 
 	<img alt="Image" src="./images/flower.jpg">
-	<img alt="Image" src="./images/code.gif" >
+	<img alt="Image" src="./images/code.gif">
 	<br>
 	<br>
 	<%
@@ -68,17 +72,20 @@
 			type="password" name="password" size="10"> <input
 			type="submit" value="提交">
 	</form>
-	
+
 	<br>
-	<br>
-	---------------------->
+	<br> ---------------------->
 	<form>
-        <input type="button" style='font-size:40px' value="Start" onclick="start()">
-        <input type="button" style='font-size:40px' value="Stop" onclick="stop();">
-    </form>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;
-        <font color="blue" style='font-size:150px' id="num"></font>
-    <br>
+		<input type="button" style='font-size: 40px' value="Start"
+			onclick="start()"> <input type="button"
+			style='font-size: 40px' value="Stop" onclick="stop();">
+	</form>
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	<font color="blue" style='font-size: 150px' id="num"></font>
 	<br>
+	<br>
+
+	<c:out value="this jstl 测试！！"></c:out>
+
 </body>
 </html>
