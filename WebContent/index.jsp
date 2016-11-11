@@ -57,10 +57,13 @@
 			out.print("<br>");
 		}
 		out.print("<br>");
-		out.print("数据库操作成功，恭喜你!!!");
+		out.print("数据库操作成功，恭喜你!!!<br>");
+		
+		out.print("session::"+session.toString());
 		rs.close();
 		statement.close();
 		connection.close();
+		
 	%>
 
 	<form action="HiberateServlet" method="post">
@@ -86,6 +89,18 @@
 	<br>
 
 	<c:out value="this jstl 测试！！"></c:out>
+
+	<br>
+	<br> ------------------->
+	<form action="UpfileServlet" enctype="multipart/form-data"
+		method="post">
+
+		SelectImage: <input type="file" name="myfile" /><br> 
+		<input type="file" name="myfile2" /><br> 
+		<input type="file" name="myfile3" /><br> 
+		<input
+			type="submit" value="upload" />
+	</form>
 
 </body>
 </html>

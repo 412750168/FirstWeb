@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import zzl.first.bean.Stock;
 import zzl.first.bean.StockDailyRecord;
@@ -27,6 +28,7 @@ import zzl.first.spring.HelloWorld;
 
 @WebServlet(name = "HiberateServlet", urlPatterns = { "/HiberateServlet" }, loadOnStartup = 1)
 public class HiberateServlet extends HttpServlet {
+	 int i = 0;
 
 	@Override
 	public void init() throws ServletException {
@@ -92,6 +94,11 @@ public class HiberateServlet extends HttpServlet {
         HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
         obj.printMessage();
         
+        String filePath=this.getServletConfig().getServletContext().getRealPath("/");
+        System.out.println(filePath);
+        
+        HttpSession session_local = req.getSession();
+        System.out.println("session:"+session_local.toString()+"::i++::"+i++);
 	}
 
 }
